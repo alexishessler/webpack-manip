@@ -25,7 +25,11 @@ document.getElementById('button').addEventListener('click', () => {
             const $ = jquery.default;
             console.log("----")
             console.log($)
-            $('body').append(`<p id="FirstAddedElement">jQuery loaded successfully via <b>Webpack</b></p>`)
+            $('#column').append(`<p id="FirstAddedElement">Check network console tool - jQuery loaded via <b>Webpack</b</p>`)
+            $('button').attr("disabled", true);
+            // $('button').removeClass('btn-primary')
+            // $('button').addClass('btn-secondary')
+            $('button').text('jQuery loaded successfully')
             $('body').css('background-color', 'lightblue')
             importJqueryToggle = !importJqueryToggle;
         }
