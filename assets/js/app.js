@@ -21,7 +21,10 @@ document.getElementById('button').addEventListener('click', () => {
     // We need to use lazyloading
     import('jquery').then((jquery) => {
         if(!importJqueryToggle){
+            console.log(jquery)
             const $ = jquery.default;
+            console.log("----")
+            console.log($)
             $('body').append(`<p id="FirstAddedElement">jQuery loaded successfully via <b>Webpack</b></p>`)
             $('body').css('background-color', 'lightblue')
             importJqueryToggle = !importJqueryToggle;
